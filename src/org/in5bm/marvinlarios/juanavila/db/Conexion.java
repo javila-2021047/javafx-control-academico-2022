@@ -21,8 +21,8 @@ public class Conexion {
     private final String IP_SERVER = "127.0.0.1";
     private final String PORT = "3306";
     private final String DB = "db_control_academico_in5bm";
-    private final String USER = "root";
-    private final String PASSWORD = "";
+    private final String USER = "kinal";
+    private final String PASSWORD = "admin";
     private Connection conexion;
     
     

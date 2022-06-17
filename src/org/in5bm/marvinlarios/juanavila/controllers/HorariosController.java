@@ -36,7 +36,8 @@ import org.in5bm.marvinlarios.juanavila.system.Principal;
 
 /**
  *
- * @author juana
+ * @author Juan Carlos Avila Flores
+ * Carnet:2021047
  */
 public class HorariosController implements Initializable {
 

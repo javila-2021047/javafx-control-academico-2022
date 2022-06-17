@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package org.in5bm.marvinlarios.juanavila.models;
 
 import java.time.LocalDate;
@@ -15,7 +12,8 @@ import javafx.beans.property.StringProperty;
 
 /**
  *
- * @author Juan aVILA
+ * @author Juan Carlos Avila Flores
+ * Carnet:2021047
  *
  *
  */

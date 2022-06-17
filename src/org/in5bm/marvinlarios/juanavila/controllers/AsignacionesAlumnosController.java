@@ -20,7 +20,8 @@ import org.in5bm.marvinlarios.juanavila.models.Cursos;
 
 /**
  *
- * @author jUAN Avila
+ * @author jUAN Carlos Avila Flores
+ * Carnet:2021047
  */
 import java.net.URL;
 import java.sql.PreparedStatement;
@@ -613,7 +614,7 @@ public class AsignacionesAlumnosController implements Initializable {
 
                 tblAsignacionesAlumnos.setDisable(true);
 
-//clave primaria
+
                 txtId.setEditable(false);
                 txtId.setDisable(true);
 
@@ -714,7 +715,7 @@ public class AsignacionesAlumnosController implements Initializable {
                 
                
                 break;
-            case GUARDAR: //Cancela la inserción
+            case GUARDAR: 
                 btnNuevo.setText("Nuevo");
                 imgNuevo.setImage(new Image(PAQUETE_IMAGES + "agregar.png"));
 
@@ -795,7 +796,7 @@ public class AsignacionesAlumnosController implements Initializable {
     @FXML
     private void clicEliminar() {
         switch (operacion) {
-            case ACTUALIZAR: //Cancelar una modificación.
+            case ACTUALIZAR: 
                 btnNuevo.setDisable(false);
                 btnNuevo.setVisible(true);
                 imgNuevo.setVisible(true);
