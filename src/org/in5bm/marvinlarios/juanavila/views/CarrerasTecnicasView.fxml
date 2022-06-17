@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="648.0" prefWidth="1152.0" stylesheets="@../resources/css/EstiloModulos.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.in5bm.marvinlarios.juanavila.controllers.CarrerasTecnicasController">
+   <children>
+      <BorderPane layoutX="5.0" layoutY="4.0" prefHeight="640.0" prefWidth="1142.0">
+         <left>
+            <Pane id="panel-navegacion" prefWidth="240.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane id="pane-entidad" layoutX="16.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="2.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="TOP_CENTER" prefHeight="29.0" prefWidth="189.0" text="Carreras Técnicas">
+                                 <font>
+                                    <Font name="Candara Bold Italic" size="26.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="10.0" />
+                                 </padding>
+                              </Label>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/images/carrerasTecnicas.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <VBox id="vbox-crud" layoutX="22.0" layoutY="254.0" prefHeight="354.0" prefWidth="198.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="imgNuevo" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/images/agregar.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#clicNuevo" prefHeight="55.0" prefWidth="120.0" styleClass="botones-crud" text="Nuevo">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="imgModificar" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/images/editar.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#clicModificar" prefHeight="55.0" prefWidth="120.0" styleClass="botones-crud" text="Modificar">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="imgEliminar" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/images/eliminar.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#clicEliminar" prefHeight="55.0" prefWidth="120.0" styleClass="botones-crud" text="Eliminar">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="imgReporte" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/images/reporte.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#clicReporte" prefHeight="55.0" prefWidth="120.0" styleClass="botones-crud" text="Reporte">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </Pane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1F618D;" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane layoutX="65.0" layoutY="44.0" prefHeight="479.0" prefWidth="235.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Código Técnico:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Carrera:" GridPane.rowIndex="3">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <Label text="Grado:" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="txtCodigoTecnico" disable="true" editable="false" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtCarrera" disable="true" editable="false" GridPane.rowIndex="4" />
+                        <TextField fx:id="txtGrado" disable="true" editable="false" GridPane.rowIndex="7" />
+                        <TextField fx:id="txtSeccion" disable="true" editable="false" GridPane.rowIndex="10" />
+                        <TextField fx:id="txtJornada" disable="true" editable="false" GridPane.rowIndex="13" />
+                        <Label text="Sección:" GridPane.rowIndex="9">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label text="Jornada:" GridPane.rowIndex="12">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="tblCarrerasTecnicas" layoutX="314.0" layoutY="44.0" onMouseClicked="#seleccionarElemento" prefHeight="479.0" prefWidth="576.0">
+                     <columns>
+                        <TableColumn fx:id="colCodigoTecnico" prefWidth="124.0" text="Código Técnico" />
+                        <TableColumn fx:id="colCarrera" prefWidth="109.0" text="Carrera" />
+                        <TableColumn fx:id="colGrado" prefWidth="105.0" text="Grado" />
+                        <TableColumn fx:id="colSeccion" prefWidth="114.0" text="Sección" />
+                        <TableColumn fx:id="colJornada" prefWidth="123.0" text="Jornada" />
+                     </columns>
+                  </TableView>
+                  <ImageView fitHeight="96.0" fitWidth="72.0" layoutX="805.0" layoutY="537.0" onMouseClicked="#clicRegresar" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/images/regresar.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

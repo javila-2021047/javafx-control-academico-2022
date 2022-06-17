@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="648.0" prefWidth="1152.0" style="-fx-background-color: #0A0B37;" stylesheets="@../resources/css/EstiloMenuPrincipal.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.in5bm.marvinlarios.juanavila.controllers.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="257.0" fitWidth="324.0" layoutX="448.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/images/logo.png" />
+         </image></ImageView>
+      <MenuBar id="menu-bar" layoutX="14.0" layoutY="14.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Módulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#clicAlumnos" text="Alumnos" />
+                  <MenuItem mnemonicParsing="false" text="Instructores" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicSalones" text="Salones" />
+                  <MenuItem mnemonicParsing="false" onAction="#clicCarrerasTecnicas" text="Carreras Técnicas" />
+                  <MenuItem mnemonicParsing="false" onAction="#clickHorarios" text="Horarios" />
+                  <MenuItem mnemonicParsing="false" text="Cursos" />
+                  <MenuItem mnemonicParsing="false" onAction="#clickAsignacion" text="Asignación Alumnos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Acerca De" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="421.0" layoutY="411.0" text="Control Académico" textFill="WHITE">
+         <font>
+            <Font name="Book Antiqua" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

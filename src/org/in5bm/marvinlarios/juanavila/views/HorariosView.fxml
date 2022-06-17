@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="648.0" prefWidth="1152.0" stylesheets="@../resources/css/EstiloModulos.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.in5bm.marvinlarios.juanavila.controllers.HorariosController">
+   <children>
+      <BorderPane layoutX="5.0" layoutY="4.0" prefHeight="640.0" prefWidth="1142.0">
+         <left>
+            <Pane id="panel-navegacion" prefWidth="240.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane id="pane-entidad" layoutX="16.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="2.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="TOP_CENTER" text="Horarios">
+                                 <font>
+                                    <Font name="Candara Bold Italic" size="24.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="10.0" />
+                                 </padding>
+                              </Label>
+                              <ImageView fitHeight="136.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <VBox id="vbox-crud" layoutX="22.0" layoutY="254.0" prefHeight="354.0" prefWidth="198.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="imgNuevo" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/images/agregar.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#clicNuevo" prefHeight="55.0" prefWidth="120.0" styleClass="botones-crud" text="Nuevo">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin></Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="imgModificar" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/images/editar.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#clicModificar" prefHeight="55.0" prefWidth="120.0" styleClass="botones-crud" text="Modificar">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="imgEliminar" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/images/eliminar.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#clicEliminar" prefHeight="55.0" prefWidth="120.0" styleClass="botones-crud" text="Eliminar">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="imgReporte" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/images/reporte.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#clicReporte" prefHeight="55.0" prefWidth="120.0" styleClass="botones-crud" text="Reporte">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </Pane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1F618D;" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tblHorarios" layoutX="88.0" layoutY="249.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="350.0" prefWidth="726.0">
+                    <columns>
+                      <TableColumn fx:id="colId" prefWidth="82.0" text="ID" />
+                      <TableColumn fx:id="colHorarioInicio" prefWidth="97.0" text="Horario Inicio" />
+                        <TableColumn fx:id="colHorarioFinal" prefWidth="112.0" text="Horario Final" />
+                        <TableColumn fx:id="colLunes" prefWidth="95.0" text="Lunes" />
+                        <TableColumn fx:id="colMartes" prefWidth="94.0" text="Martes" />
+                        <TableColumn fx:id="colMiercoles" prefWidth="95.0" text="Miercoles" />
+                        <TableColumn fx:id="colJueves" prefWidth="75.0" text="Jueves" />
+                        <TableColumn fx:id="colViernes" prefWidth="75.0" text="Viernes" />
+                    </columns>
+                  </TableView>
+                  <ImageView fitHeight="96.0" fitWidth="72.0" layoutX="814.0" layoutY="21.0" onMouseClicked="#clicMenuPrincipal" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/images/regresar.png" />
+                     </image>
+                  </ImageView>
+                  <GridPane layoutX="88.0" layoutY="57.0" prefHeight="151.0" prefWidth="407.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.39996337890625" minWidth="10.0" prefWidth="194.39996337890625" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.9999938964844" minWidth="10.0" prefWidth="209.60003662109375" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="ID" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <Label text="Horario Inicio" textFill="WHITE" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                        <Label GridPane.rowIndex="3" />
+                        <Label GridPane.rowIndex="2" />
+                        <TextField fx:id="txtId" disable="true" editable="false" GridPane.rowIndex="1" />
+                        <JFXTimePicker fx:id="tmpHorarioInicio" defaultColor="#020a2e" disable="true" GridPane.rowIndex="3" />
+                        <JFXTimePicker fx:id="tmpHorarioFinal" defaultColor="#04093e" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Horario Final" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="544.0" layoutY="101.0" prefHeight="106.0" prefWidth="224.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <CheckBox fx:id="chkLunes" disable="true" mnemonicParsing="false" text="Lunes" textFill="WHITE">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="chkMartes" disable="true" mnemonicParsing="false" text="Martes" textFill="WHITE" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="chkMiercoles" disable="true" mnemonicParsing="false" text="Miercoles" textFill="WHITE" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="chkJueves" disable="true" mnemonicParsing="false" text="Jueves" textFill="WHITE" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="chkViernes" disable="true" mnemonicParsing="false" text="Viernes" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
